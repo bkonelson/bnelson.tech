@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Family Car Comparison Homepage</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="header">
+		<h1>Why are mini-vans the best family vehicle?</h1>
+	</div>
+	<div id="main">
+		<h2>Introduction</h2>
+		<p>
+			There are a lot of different options out there for vehicles.  When it
+			comes to vehicles with more than 4 seats however, the options are limited.  
+			This page is dedicated to convincing you why mini-vans are the best, at least
+			for people with children, and why some people don't want to accept that.
+		</p>
+		<h2>Comparison Criteria</h2>
+		<ul>
+			<li>Average Price</li>
+			<li>Ease of use / Standard features</li>
+			<li>Gas mileage</li>
+			<li>Lifespan</li>
+		</ul>
+		<h2>Table of interesting numbers / descriptors</h2>
+		<table>
+			<tr>
+				<th>Category</th>
+				<th>SUV</th>
+				<th>Truck</th>
+				<th>Mini-Van</th>
+			</tr>
+			<tr>
+				<th>Average Price
+				<td>$37,000</td>
+				<td>$40,000+</td>
+				<td>$30,000</td>
+			</tr>
+			<tr>
+				<th>Ease of Use / Features</th>
+				<td>Not good</td>
+				<td>Bit better</td>
+				<td>Awesome</td>
+			</tr>
+			<tr>
+				<th>Gas mileage</th>
+				<td>Bad</td>
+				<td>Worse</td>
+				<td>Good</td>
+			</tr>
+			<tr>
+				<th>Lifespan</th>
+				<td>Sucky</td>
+				<td>Okay</td>
+				<td>Awesome</td>
+			</tr>
+		</table>
+		<h2>Click a car for more info</h2>
+		<div class="imgcontainer">
+			<a class="piclink" href="suv.html"><img class="imglnk" src="images/suv.jpg" alt="suv"></a>
+			<a class="piclink" href="truck.html"><img class="imglnk" src="images/truck.jpg"></a>
+			<a class="piclink" href="minivan.html"><img class="imglnk" src="images/minivan.jpg"></a>
+		</div>
+		<h2>Which-Vehicle-is-Right-for-me: Calculator</h2>
+		<form>
+			Enter number of children you have:<br>
+			<input type="radio" name="children" id="zero">0<br>
+			<input type="radio" name="children" id="onetofour">1-4<br>
+			<input type="radio" name="children" id="fiveplus">5+<br><br>
+			Enter your pride level on a scale of 1-10, 1 your self-description is - "I am literal dirt" and 10 - 
+			"I am a god among insects"<br>
+			<input type="radio" name="pride" id="first">1-3<br>
+			<input type="radio" name="pride" id="second">4-7<br>
+			<input type="radio" name="pride" id="third">8-10<br><br>
+		</form>
+		<div id="calcbutton" onclick="calculate()">Calculate</div><br><br>
+		<p id="answer">Answer:</p><br><br>
+		<p id="snarkyresponse"></p><br><br>	
+		<h2>Conclusion</h2>
+		<p>
+			Mini-vans sometimes have a bad connotation. They are often associated with boring
+			housewives, and fathers who have traded in the majority of their manliness for
+			a life of tantrums and poopy diapers. However; after looking at the fact sheets
+			for all three vehicle types, it is easy to see that mini-vans are much more than a 
+			signal to society that you've lost all of your sex appeal.  They are quality vehicles
+			that really fit the needs of a large group of consumers, and they fit the need well.
+		</p><br><br><br>
+	</div>
+</div>
+<script>
+function calculate() {
+	var zero = document.getElementById("zero").checked;
+	var onetofour = document.getElementById("onetofour").checked;
+	var fiveplus = document.getElementById("fiveplus").checked;
+	var first = document.getElementById("first").checked;
+	var second = document.getElementById("second").checked;
+	var third = document.getElementById("third").checked;
+	
+	if (zero) {
+		document.getElementById("answer").innerHTML = "Answer: It doesn't matter, get what you want and enjoy your freedom while it lasts.";
+	}
+	else if (onetofour) {
+		document.getElementById("answer").innerHTML = "Answer: Mini-van, enjoy it.";
+	}
+	else if (fiveplus) {
+		document.getElementById("answer").innerHTML = "Answer: Mini-van, also I have both sympathy and the deepest respect for you.";
+	}
+	else {
+		document.getElementById("answer").innerHTML = "Select an option.";
+	}
+	if (first) {
+		document.getElementById("snarkyresponse").innerHTML = "And you are awesome, keep your chin up!";
+	}
+	else if (second) {
+		document.getElementById("snarkyresponse").innerHTML = "And way to have some pride, your grasp of reality is inspiring.";   
+	}
+	else if (third) {
+		document.getElementById("snarkyresponse").innerHTML = "Do whatever you want really, obviously you're important enough to ride in a platinum helicopter if need be."; 
+	}
+}
+</script>
+</body>
+</html> 

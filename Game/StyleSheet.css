@@ -1,0 +1,81 @@
+.Mainpage {
+	margin:auto;
+	max-width:1280px;
+	display:block;
+}
+
+.Title {
+	text-align:center;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+
+.blocks {
+	display:block;
+	margin:auto;
+	max-width:1115px;
+	width:calc(100% - 100px);
+}
+
+.square {
+	height:100px;
+	width:100px;
+	border-width:2px;
+	border-style:solid;
+	border-color:black;
+	display:inline-block;
+	background-color:white;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:1.3em;
+} 
+
+.lvldesc {
+	text-align:center;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:1.3em;
+}
+
+.reset {
+	display:block;
+	margin:auto;
+	width:150px;
+	height:75px;
+	cursor:pointer;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:1.5em;
+}
+
+.reset:hover {
+	box-shadow: 5px 5px 5px grey;
+}
+
+.submit {
+	display:block;
+	margin:auto;
+	width:200px;
+	height:75px;
+	cursor:pointer;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:1.5em;
+}
+
+.submit:hover {
+	box-shadow: 5px 5px 5px grey;
+}
+
+.endmsg {
+	display:none;
+	margin-left:500px;
+	font-size:2em;
+}
+
+.lvllink {
+	color:green;
+	margin-left:100px;
+}
+
+.mistake {
+	display:none;
+	margin-left:500px;
+	font-size:2em;
+	color:red;
+}

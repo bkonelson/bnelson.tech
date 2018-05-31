@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Computers</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body id="homepage">
+<div id="wrapper">
+	<h1><a href="index.htm" class="logo"><b>Custom Computers</b></a></h1>
+	
+	<div id="slideshow-container">
+		<div id="imgcontainer">
+			<img class="slideshow" src="images/firstslide.png">
+			<img class="slideshow" src="images/whycustom.png">
+			<img class="slideshow" src="images/Mass-Effect-Andromeda.png">
+			<img class="slideshow" src="images/office.png">
+			<img class="slideshow" src="images/ubuntu.png">
+		</div>
+		<a id="slidebuttonleft" onclick="plusDivs(-1)">&#10094;</a>
+		<a id="slidebuttonright" onclick="plusDivs(1)">&#10095;</a>
+	</div>
+	
+	<div id="container">
+		<div id="selectsystem1">
+			<a href="PreAssembly.htm" class="logo">
+			<img id="Mainimage" src="images/MainImage.jpg" alt="build pc">
+			<p class="intext">Choose a Pre-Configured System</p>
+			</a>	
+		</div>
+		<p class="intext">- OR -</p>
+		<div id="selectsystem2">
+			<a href="Selection.php" class="logo">
+			<img id="Secondaryimage" src="images/Customize.JPG" alt="GoTOCustomize">
+			<p class="intext">Skip to Component Selection</p>
+			</a>
+		</div>
+	</div>
+
+</div>
+<div id="footer">
+	<div class="foot">
+		Do you have questions or concerns? Send e-mail to: custompc13579@gmail.com
+	</div>
+	<div class="foot">
+		<a href="https://www.facebook.com/custompc12579/" class="logo" target="_blank"><img class="icons" src="images/facebook.png" alt="facebook"></a>
+		<a href="https://www.youtube.com/watch?v=Z7dNXramIIY" class="logo" target="_blank"><img class="icons" src="images/youtube.png" alt="youtube"></a>
+		<a href="mailto:custompc13579@gmail.com?Subject=Question/Concern" class="logo" target="_top"><img class="icons" src="images/mail.png" alt="email"></a>
+	</div>
+	<div class="foot">
+		Need help choosing components?  Visit the <a href="FAQ.htm" id="FAQ" target="_blank">FAQ</a>
+	</div>
+</div>
+
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("slideshow");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	}
+</script>
+</body>
+</html>

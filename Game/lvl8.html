@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+<script>
+$(document).ready(function(){
+	window.func1 = function() {
+		if (document.getElementById("b1").style.backgroundColor=="blue") {
+			$("#b1").css("background-color","yellow");
+		}
+		else if (document.getElementById("b1").style.backgroundColor=="yellow") {
+			$("#b1").css("background-color","red");
+		}
+		else {
+			$("#b1").css("background-color","blue");
+		}	
+    }
+	setInterval(window.func1, 3000);
+	window.func2 = function() {
+		if (document.getElementById("b2").style.backgroundColor=="yellow") {
+			$("#b2").css("background-color","blue");
+		}
+		else if (document.getElementById("b2").style.backgroundColor=="blue") {
+			$("#b2").css("background-color","red");
+		}
+		else {
+			$("#b2").css("background-color","yellow");
+		}	
+    }
+	setInterval(window.func2, 7000);	
+	window.func3 = function() {
+		if (document.getElementById("b3").style.backgroundColor=="green") {
+			$("#b3").css("background-color","red");
+		}
+		else if (document.getElementById("b3").style.backgroundColor=="red") {
+			$("#b3").css("background-color","blue");
+		}
+		else {
+			$("#b3").css("background-color","green");
+		}	
+    }
+	setInterval(window.func3, 13000);
+	window.func4 = function() {
+		if (document.getElementById("b4").style.backgroundColor=="blue") {
+			$("#b4").css("background-color","yellow");
+		}
+		else if (document.getElementById("b4").style.backgroundColor=="yellow") {
+			$("#b4").css("background-color","red");
+		}
+		else {
+			$("#b4").css("background-color","blue");
+		}	
+    }
+	setInterval(window.func4, 4000);
+	window.func5 = function() {
+		if (document.getElementById("b5").style.backgroundColor=="red") {
+			$("#b5").css("background-color","yellow");
+		}
+		else if (document.getElementById("b5").style.backgroundColor=="yellow") {
+			$("#b5").css("background-color","blue");
+		}
+		else {
+			$("#b5").css("background-color","red");
+		}	
+    }
+	setInterval(window.func5, 30000);
+	window.func6 = function() {
+		if (document.getElementById("b6").style.backgroundColor=="yellow") {
+			$("#b6").css("background-color","blue");
+		}
+		else if (document.getElementById("b6").style.backgroundColor=="blue") {
+			$("#b6").css("background-color","red");
+		}
+		else {
+			$("#b6").css("background-color","yellow");
+		}	
+    }
+	setInterval(window.func6, 15000);
+	window.func7 = function() {
+		if (document.getElementById("b7").style.backgroundColor=="green") {
+			$("#b7").css("background-color","yellow");
+		}
+		else if (document.getElementById("b7").style.backgroundColor=="yellow") {
+			$("#b7").css("background-color","red");
+		}
+		else {
+			$("#b7").css("background-color","green");
+		}	
+    }
+	setInterval(window.func7, 6000);
+	window.func8 = function() {
+		if (document.getElementById("b8").style.backgroundColor=="blue") {
+			$("#b8").css("background-color","red");
+		}
+		else if (document.getElementById("b8").style.backgroundColor=="red") {
+			$("#b8").css("background-color","yellow");
+		}
+		else {
+			$("#b8").css("background-color","blue");
+		}	
+    }
+	setInterval(window.func8, 8000);
+	window.func9 = function() {
+		if (document.getElementById("b9").style.backgroundColor=="blue") {
+			$("#b9").css("background-color","green");
+		}
+		else if (document.getElementById("b9").style.backgroundColor=="green") {
+			$("#b9").css("background-color","red");
+		}
+		else {
+			$("#b9").css("background-color","blue");
+		}	
+    }
+	setInterval(window.func9, 25000);
+	window.func10 = function() {
+		if (document.getElementById("b10").style.backgroundColor=="yellow") {
+			$("#b10").css("background-color","green");
+		}
+		else if (document.getElementById("b10").style.backgroundColor=="green") {
+			$("#b10").css("background-color","red");
+		}
+		else {
+			$("#b10").css("background-color","yellow");
+		}	
+    }
+	setInterval(window.func10, 17000);
+   
+   
+   $(".reset").click(function(){
+		$(".square").css("background-color","white");
+   });
+  
+   $(".submit").click(function(){
+		var i = 0;
+		var pass = false;
+		for (i = 1; i < 11; i++) {
+			if (document.getElementById("b"+ i).style.backgroundColor=="red") {
+				pass = true;
+				continue;
+			}
+			else {
+				$(".mistake").fadeIn(2000).fadeOut(2000);
+				pass = false;
+				break;
+			}
+		}
+		if (pass) {
+			document.getElementById("lvl8msg").style.display = "block";
+		}
+   });  
+});
+
+</script>
+</head>
+
+<body>
+<div class="Mainpage">
+<h1 class="Title">Level 8</h1>
+<p class="lvldesc">Make all of the squares red</p><br><br>
+
+<div class="blocks">
+	<div id="b1" class="square" onmouseleave="func1()">1</div>
+	<div id="b2" class="square" onmouseleave="func2()">2</div>
+	<div id="b3" class="square" onmouseleave="func3()">3</div>
+	<div id="b4" class="square" onmouseleave="func4()">4</div>
+	<div id="b5" class="square" onmouseleave="func5()">5</div>
+	<div id="b6" class="square" onmouseleave="func6()">6</div>
+	<div id="b7" class="square" onmouseleave="func7()">7</div>
+	<div id="b8" class="square" onmouseleave="func8()">8</div>
+	<div id="b9" class="square" onmouseleave="func9()">9</div>
+	<div id="b10" class="square" onmouseleave="func10()">10</div>
+</div><br>
+
+<input type="button" class="reset" value="Reset"></input><br>
+<input type="button" class="submit" value="Submit"></input><br>
+
+<p id="lvl8msg" class="endmsg">Well Done!<a class="lvllink" href="lvl9.html">Next Level -></a></p>
+<p id="oops" class="mistake">Not quite right, try again.</p>
+
+</div>
+</body>
+</html>

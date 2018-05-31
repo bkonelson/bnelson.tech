@@ -1,0 +1,16 @@
+img, embed, object, video {
+	max-width:100%;
+}
+
+.wrapper{
+	width: 100%;
+	max-width:1200px;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+@media screen and (max-width: 480px) {
+    .example {
+        background-color: lightgreen;
+    }
+}	

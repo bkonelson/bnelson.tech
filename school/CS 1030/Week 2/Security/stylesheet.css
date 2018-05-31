@@ -1,0 +1,36 @@
+body {
+	width: 100%;
+	max-width:1000px;
+	margin:auto;
+	background-color:rgba(100,200,100,.5);
+	font-size:1.5em;
+}
+
+h1 {
+	font-family:Georgia, serif;
+	font-size:2em;
+	color:#4B0082;
+}
+
+h2 {
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+.pglink {
+	width:40%;
+	margin:30px 0;
+	display:inline-block;
+	font-size:1.6em;
+}
+
+img {
+	display:block;
+	margin:auto;
+	width:50%;
+	min-width:350px;
+	border-radius:10px;
+}
+
+
+

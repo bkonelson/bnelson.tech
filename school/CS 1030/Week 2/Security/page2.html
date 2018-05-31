@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Architecture</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+	<h1>Architecture</h1>
+	<h2>Two of the most basic ways to design a network with DMZ are as follows:</h2>
+	<ul>
+		<li>Single Firewall</li>
+		<li>Dual Firewall</li>
+	</ul>
+	<img src="images/dmzsingle.png" alt="DMZ single layout">
+	<p>	
+		In the single firewall network there are three legs: the internal network, the dmz, 
+		and the external network.  In this network the firewall is a single point of failure.  
+		It has to handle traffic going to both the DMZ and the internal network.  
+	</p>
+	<img src="images/dmzdual.png" alt="DMZ dual layout">
+	<p>	
+		In the dual firewall network there are two firewalls.  One that connects to both the DMZ 
+		and internal network, and another one for just the internal network.  This is a more secure approach 
+		then just using a single firewall, as all the communication that goes to the potentially
+		sensitive information has to go through multiple firewalls.
+	</p>
+	<div class="pglink">
+		<a href="index.html">&#8592 Back to Home</a>
+	</div>
+</body>
+</html> 

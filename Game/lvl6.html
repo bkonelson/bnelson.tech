@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+<script>
+$(document).ready(function(){
+	window.func1 = function() {
+		if (document.getElementById("b3").style.backgroundColor!="blue") {
+			$("#b3").css("background-color","blue");
+		}
+		else {
+			$("#b3").css("background-color","red");	
+		}	
+   }	
+   window.func2 = function() {
+		if (document.getElementById("b7").style.backgroundColor!="yellow") {
+			$("#b7").css("background-color","yellow");
+		}
+		else {
+			$("#b7").css("background-color","red");	
+		}	
+   }	
+   window.func3 = function() {
+		if (document.getElementById("b2").style.backgroundColor!="green") {
+			$("#b2").css("background-color","green");
+		}
+		else {
+			$("#b2").css("background-color","red");	
+		}	
+   }	
+   window.func4 = function() {
+		if (document.getElementById("b8").style.backgroundColor!="blue") {
+			$("#b8").css("background-color","blue");
+		}
+		else {
+			$("#b8").css("background-color","red");	
+		}	
+   }	
+   window.func5 = function() {
+		if (document.getElementById("b10").style.backgroundColor!="yellow") {
+			$("#b10").css("background-color","yellow");
+		}
+		else {
+			$("#b10").css("background-color","red");	
+		}	
+   }
+   window.func6 = function() {
+		if (document.getElementById("b1").style.backgroundColor!="green") {
+			$("#b1").css("background-color","green");
+		}
+		else {
+			$("#b1").css("background-color","red");	
+		}	
+   }	
+   window.func7 = function() {
+		if (document.getElementById("b4").style.backgroundColor!="blue") {
+			$("#b4").css("background-color","blue");
+		}
+		else {
+			$("#b4").css("background-color","red");	
+		}	
+   }	
+   window.func8 = function() {
+		if (document.getElementById("b6").style.backgroundColor!="yellow") {
+			$("#b6").css("background-color","yellow");
+		}
+		else {
+			$("#b6").css("background-color","red");	
+		}	
+   }	
+   window.func9 = function() {
+		if (document.getElementById("b5").style.backgroundColor!="green") {
+			$("#b5").css("background-color","green");
+		}
+		else {
+			$("#b5").css("background-color","red");	
+		}	
+   }	
+   window.func10 = function() {
+		if (document.getElementById("b10").style.backgroundColor!="blue") {
+			$("#b9").css("background-color","blue");
+		}
+		else {
+			$("#b9").css("background-color","red");	
+		}	
+   }	
+   window.func11 = function() {
+		if (document.getElementById("b3").style.backgroundColor!="blue") {
+			$("#b3").css("background-color","blue");
+		}
+		else {
+			$("#b3").css("background-color","red");	
+		}	
+   }	
+   window.func12 = function() {
+		if (document.getElementById("b7").style.backgroundColor!="yellow") {
+			$("#b7").css("background-color","yellow");
+		}
+		else {
+			$("#b7").css("background-color","red");	
+		}	
+   }	
+   window.func13 = function() {
+		if (document.getElementById("b2").style.backgroundColor!="green") {
+			$("#b2").css("background-color","green");
+		}
+		else {
+			$("#b2").css("background-color","red");	
+		}	
+   }	
+   window.func14 = function() {
+		if (document.getElementById("b8").style.backgroundColor!="blue") {
+			$("#b8").css("background-color","blue");
+		}
+		else {
+			$("#b8").css("background-color","red");	
+		}	
+   }	
+   window.func15 = function() {
+		if (document.getElementById("b10").style.backgroundColor!="yellow") {
+			$("#b10").css("background-color","yellow");
+		}
+		else {
+			$("#b10").css("background-color","red");	
+		}	
+   }
+   window.func16 = function() {
+		if (document.getElementById("b1").style.backgroundColor!="green") {
+			$("#b1").css("background-color","green");
+		}
+		else {
+			$("#b1").css("background-color","red");	
+		}	
+   }	
+   window.func17 = function() {
+		if (document.getElementById("b4").style.backgroundColor!="blue") {
+			$("#b4").css("background-color","blue");
+		}
+		else {
+			$("#b4").css("background-color","red");	
+		}	
+   }	
+   window.func18 = function() {
+		if (document.getElementById("b6").style.backgroundColor!="yellow") {
+			$("#b6").css("background-color","yellow");
+		}
+		else {
+			$("#b6").css("background-color","red");	
+		}	
+   }	
+   window.func19 = function() {
+		if (document.getElementById("b5").style.backgroundColor!="green") {
+			$("#b5").css("background-color","green");
+		}
+		else {
+			$("#b5").css("background-color","red");	
+		}	
+   }	
+   window.func20 = function() {
+		if (document.getElementById("b9").style.backgroundColor!="blue") {
+			$("#b9").css("background-color","blue");
+		}
+		else {
+			$("#b9").css("background-color","red");	
+		}	
+   }	
+   $(".reset").click(function(){
+		$(".square").css("background-color","white");
+   });
+  
+   $(".submit").click(function(){
+		var i = 0;
+		var pass = false;
+		for (i = 1; i < 11; i++) {
+			if (document.getElementById("b"+ i).style.backgroundColor=="red") {
+				pass = true;
+				continue;
+			}
+			else {
+				$(".mistake").fadeIn(2000).fadeOut(2000);
+				pass = false;
+				break;
+			}
+		}
+		if (pass) {
+			document.getElementById("lvl6msg").style.display = "block";
+		}
+   });  
+});
+
+</script>
+</head>
+
+<body>
+<div class="Mainpage">
+<h1 class="Title">Level 6</h1>
+<p class="lvldesc">Make all of the squares red</p><br><br>
+
+<div class="blocks">
+	<div id="b1" class="square" onmouseover="func1()" onclick="func11()">1</div>
+	<div id="b2" class="square" onmouseover="func2()" onclick="func12()">2</div>
+	<div id="b3" class="square" onmouseover="func3()" onclick="func13()">3</div>
+	<div id="b4" class="square" onmouseover="func4()" onclick="func14()">4</div>
+	<div id="b5" class="square" onmouseover="func5()" onclick="func15()">5</div>
+	<div id="b6" class="square" onmouseover="func6()" onclick="func16()">6</div>
+	<div id="b7" class="square" onmouseover="func7()" onclick="func17()">7</div>
+	<div id="b8" class="square" onmouseover="func8()" onclick="func18()">8</div>
+	<div id="b9" class="square" onmouseover="func9()" onclick="func19()">9</div>
+	<div id="b10" class="square" onmouseover="func10()" onclick="func20()">10</div>
+</div><br>
+
+<input type="button" class="reset" value="Reset"></input><br>
+<input type="button" class="submit" value="Submit"></input><br>
+
+<p id="lvl6msg" class="endmsg">Outstanding!<a class="lvllink" href="lvl7.html">Next Level -></a></p>
+<p id="oops" class="mistake">Not quite right, try again.</p>
+
+</div>
+</body>
+</html>

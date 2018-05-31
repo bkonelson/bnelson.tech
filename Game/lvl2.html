@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+<script>
+$(document).ready(function(){
+   $(".square").click(function(){
+		$(this).css("background-color","red");
+   }); 
+   $(".reset").click(function(){
+		$(".square").css("background-color","white");
+   }); 
+   $(".submit").click(function(){
+		var i = 0;
+		var pass = false;
+		for (i = 1; i < 11; i++) {
+			if (document.getElementById("b"+ i).style.backgroundColor=="red") {
+				pass = true;
+				continue;
+			}
+			else {
+				$(".mistake").fadeIn(2000).fadeOut(2000);
+				pass = false;
+				break;
+			}
+		}
+		if (pass) {
+			document.getElementById("lvl2msg").style.display = "block";
+		}
+   }); 
+});
+
+</script>
+</head>
+
+<body>
+<div class="Mainpage">
+<h1 class="Title">Level 2</h1>
+<p class="lvldesc">Make all of the squares red</p><br><br>
+
+<div class="blocks">
+	<div id="b1" class="square"></div>
+	<div id="b2" class="square"></div>
+	<div id="b3" class="square"></div>
+	<div id="b4" class="square"></div>
+	<div id="b5" class="square"></div>
+	<div id="b6" class="square"></div>
+	<div id="b7" class="square"></div>
+	<div id="b8" class="square"></div>
+	<div id="b9" class="square"></div>
+	<div id="b10" class="square"></div>
+</div><br>
+
+<input type="button" class="reset" value="Reset"></input><br>
+<input type="button" class="submit" value="Submit"></input><br>
+
+<p id="lvl2msg" class="endmsg">Nice!<a class="lvllink" href="lvl3.html">Next Level -></a></p>
+<p id="oops" class="mistake">Not quite right, try again.</p>
+
+</div>
+</body>
+</html>

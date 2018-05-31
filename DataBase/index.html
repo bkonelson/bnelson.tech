@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home and Income Database Search</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<div id="main">
+		<div id='search_bar'>
+			<form id='main_form'>
+				<input id='main_input' type='text' name='main_input' onkeyup='showCity(this.value)' placeholder='Search for a City...'>
+			</form>
+			<p id="oar">-OR-</p>
+			<form id='buttonform'>
+				<input id="button" type="button" name="button_input" onclick="showRankings()" value="See the Full Rankings">
+			</form>
+		</div>
+		<div id='results'></div>
+	</div>
+	<div id="footer"></div>
+</div>
+<script>
+function showCity(str) {
+  var xhttp; 
+  if (str == "") {
+    document.getElementById("results").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("results").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getdata.php?q="+str, true);
+  xhttp.send();
+}
+function showRankings() {
+  var xhttp; 
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("results").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "showrankings.php", true);
+  xhttp.send();
+}
+</script>
+</body>
+</html> 
